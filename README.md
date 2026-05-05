@@ -35,6 +35,8 @@ streamlit run app/streamlit_app.py
 ```
 
 ## Estructura
+
+```
 solar-sizing/
 ├── app/
 │   └── streamlit_app.py   # Dashboard
@@ -44,7 +46,7 @@ solar-sizing/
 │   ├── pvgis.py           # Pipeline de extracción PVGIS
 │   └── model.py           # Modelo bayesiano
 └── requirements.txt
-
+```
 ## Autor
 
 Saul Cova — [linkedin.com/in/saul-cova-008830145](https://linkedin.com/in/saul-cova-008830145)
