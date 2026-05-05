@@ -3,11 +3,12 @@ name = "solar-sizing"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
     "pandas>=3.0.2",
     "plotly>=6.7.0",
     "pymc>=5.28.5",
     "requests>=2.33.1",
-    "streamlit>=1.57.0",
 ]
+[tool.uv]
+no-binary-package = ["pyarrow"]
