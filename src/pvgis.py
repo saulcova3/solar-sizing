@@ -72,12 +72,29 @@ def compute_daily_stats(df):
         "H_std": H_std,
     }
 
+def clean_and_enrich(df):
+    """
+    Limpia y enriquece el DataFrame horario.
+
+    - Elimina filas con valores negativos (errores de sensor)
+    - Agrega columna de mes para análisis estacional
+    - Agrega columna de hora para análisis diurno
+    """
+    # Valores negativos son errores — los reemplazamos con 0
+    df[["Gb(i)", "Gd(i)"]] = df[["Gb(i)", "Gd(i)"]].clip(lower=0)
+
+    # Columnas de contexto temporal
+    df["month"] = df.index.month
+    df["hour"] = df.index.hour
+
+    return df
 
 if __name__ == "__main__":
-    raw = get_pvgis_data(lat=8.6, lon=-63.9)  # Ciudad Guayana
+    raw = get_pvgis_data(lat=8.6, lon=-63.9)
     df = parse_hourly_radiation(raw)
+    df = clean_and_enrich(df)
     stats = compute_daily_stats(df)
 
     print(f"H_mean: {stats['H_mean']:.3f} kWh/m²/día")
     print(f"H_std:  {stats['H_std']:.3f} kWh/m²/día")
-    print(df.head())
+    print(stats["daily_df"].head())
