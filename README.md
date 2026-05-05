@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ## Uso
 
 ```bash
-streamlit run app/streamlit_app.py
+python -m streamlit run app/streamlit_app.py
 ```
 
 ## Estructura
