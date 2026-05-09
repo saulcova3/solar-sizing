@@ -59,7 +59,7 @@ solar-sizing/
 │   └── exploracion.py     # Exploración y visualización
 ├── src/
 │   ├── pvgis.py           # Pipeline de extracción PVGIS
-│   └── model.py           # Modelo bayesiano
+│   └── model.py           # Modelo matemático
 └── requirements.txt
 ```
 ## Autor
