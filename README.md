@@ -1,4 +1,4 @@
-# ☀️ Solar Sizing — Dimensionamiento Bayesiano de Paneles Solares
+# ☀️ Solar Sizing — Dimensionamiento cuasi-bayesiano de Paneles Solares
 
 Herramienta para estimar el número óptimo de paneles solares necesarios
 dado el consumo eléctrico y la ubicación geográfica del usuario,
