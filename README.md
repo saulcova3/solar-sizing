@@ -28,7 +28,7 @@ constituye inferencia bayesiana completa.
 
 ## Stack
 
-- **PyMC** — modelado bayesiano con MCMC (NUTS sampler)
+- **PyMC** — muestreo probabilístico con MCMC (NUTS sampler)
 - **PVGIS API** — datos históricos de irradiación solar (Comisión Europea)
 - **Streamlit** — dashboard interactivo
 - **matplotlib** — visualización del posterior
